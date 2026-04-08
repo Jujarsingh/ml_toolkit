@@ -1,16 +1,29 @@
 
-from utils import calculate_mean, calculate_variance, normalize_data
+from typing import List
+from data_processor import Dataprocessor
+from model import SimpleModel
+import numpy as np
 
+
+def main() -> None:
+    """
+    Main function to run data processing and model workflow.
+    """
+    data: List[float] = [1, 2, 3, 4, 100, np.nan, 5]
+
+    processor = Dataprocessor(data)
+    processor.clean_missing()
+    processor.remove_outliers()
+    processor.normalize()
+
+    print("Summary:", processor.summary())
+
+    model = SimpleModel()
+    model.train(processor.data.tolist())
+
+    predictions = model.predict([1, 2, 3])
+    print("Predictions:", predictions)
 
 if __name__ == "__main__":
-    data = [10, 20, 30, 40, 50]
+    main()
 
-    print("Original Data:", data)
-
-    mean = calculate_mean(data)
-    variance = calculate_variance(data)
-    normalized = normalize_data(data)
-
-    print(f"Mean: {mean}")
-    print(f"Variance: {variance}")
-    print(f"Normalized Data: {normalized}")
