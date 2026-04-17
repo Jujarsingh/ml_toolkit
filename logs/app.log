@@ -1,0 +1,11 @@
+2026-04-17 21:51:35,811 - INFO - Starting Ml pipeline
+2026-04-17 21:51:35,811 - INFO - Data successfully converted to numpy array
+2026-04-17 21:51:35,811 - INFO - Cleaning missing data
+2026-04-17 21:51:35,813 - INFO - Removed 1 missing values
+2026-04-17 21:51:35,813 - INFO - Removing outliers
+2026-04-17 21:51:35,814 - INFO - Removed 1 outliers
+2026-04-17 21:51:35,815 - INFO - Normalizing data
+2026-04-17 21:51:35,816 - INFO - Data normalization completed
+2026-04-17 21:51:35,816 - INFO - Training model
+2026-04-17 21:51:35,817 - INFO - Making prediction
+2026-04-17 21:51:35,817 - INFO - Pipeline completed successfully
